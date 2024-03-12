@@ -12,10 +12,11 @@
             _despesas = despesas;
         }
 
-        public string DetailsFaturamento()
+        public override string ToString()
         {
-            return _faturamento.ToString() +", "+ _despesas.ToString();
+            return _faturamento.ToString() + ", " + _despesas.ToString();
         }
+       
 
         
     }
