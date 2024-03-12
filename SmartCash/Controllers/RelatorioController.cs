@@ -9,14 +9,13 @@ namespace SmartCash.Controllers
 
 
         public IActionResult Relatorio()
-        {
-            FluxoDeCaixa fluxoDeCaixa = new FluxoDeCaixa("entrada", 1000, "Valor lucrado no dia", DateTime.Now);
-            FluxoDeCaixa fluxoDeCaixa2 = new FluxoDeCaixa("saida", 1000, "Valor lucrado no dia", DateTime.Now);
-            Faturamento faturamento = new Faturamento(fluxoDeCaixa);
-            Despesas despesas = new Despesas(fluxoDeCaixa2);
-            Relatorio relatorio = new Relatorio(faturamento, despesas);
-            return View(relatorio);
-        }
+{
+    Faturamento faturamento = new Faturamento("entrada", 1000, "Valor lucrado no dia", DateTime.Now);
+    Despesas despesas = new Despesas("saida", 1000, "Valor lucrado no dia", DateTime.Now);
+
+    Relatorio relatorio = new Relatorio(faturamento, despesas);
+    return View(relatorio);
+}
       
 
       
