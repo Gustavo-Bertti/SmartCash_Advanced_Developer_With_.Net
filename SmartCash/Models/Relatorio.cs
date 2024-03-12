@@ -14,7 +14,7 @@
 
         public override string ToString()
         {
-            return _faturamento.ToString() + ", " + _despesas.ToString();
+            return $"Faturamento: {_faturamento.Valor()}, Despesa: {_despesas.Valor()} reais";
         }
        
 
